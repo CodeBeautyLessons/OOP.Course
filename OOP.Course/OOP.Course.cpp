@@ -2,24 +2,23 @@
 #include <list>
 using namespace std;
 
-class YouTubeChannel
-{
+class YouTubeChannel {
 private: 
     string Name;
-    string OwnerName;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
 
+protected: 
+    string OwnerName;
+
 public:
-    YouTubeChannel(string name, string ownerName)
-    {
+    YouTubeChannel(string name, string ownerName) {
         Name = name;
         OwnerName = ownerName; 
         SubscribersCount = 0;
     }
 
-    void GetInfo()
-    {
+    void GetInfo() {
         cout << "Name: " << Name << endl;
         cout << "OwnerName: " << OwnerName << endl;
         cout << "SubscribersCount: " << SubscribersCount << endl;
@@ -30,33 +29,27 @@ public:
         }
     }
 
-    string GetName()
-    {
+    string GetName() {
         return Name;
     }
 
-    void SetName(string name)
-    {
+    void SetName(string name) {
         Name = name;
     }
 
-    string GetOwnerName()
-    {
+    string GetOwnerName() {
         return OwnerName;
     }
 
-    void SetOwnerName(string ownerName)
-    {
+    void SetOwnerName(string ownerName) {
         OwnerName = ownerName;
     }
 
-    void Subscribe()
-    {
+    void Subscribe() {
         SubscribersCount++;
     }
 
-    void Unsubscribe()
-    {
+    void Unsubscribe() {
         if (SubscribersCount <= 0)
         {
             return;
@@ -65,9 +58,19 @@ public:
         SubscribersCount--;
     }
 
-    void PublishVideo(string title)
-    {
+    void PublishVideo(string title) {
         PublishedVideoTitles.push_back(title);
+    }
+};
+
+class CookingYouTubeChannel: public YouTubeChannel {
+public:
+    CookingYouTubeChannel(string name, string ownerName):YouTubeChannel(name, ownerName) {
+
+    }
+
+    void Practise() {
+        cout << OwnerName << " is practising cooking, learning new recipes, experimenting with spices..." << endl;
     }
 };
 
@@ -87,6 +90,23 @@ int main()
     ytChannel.Unsubscribe();
 
     ytChannel.GetInfo();
+
+
+    cout << endl << endl;
+
+
+    CookingYouTubeChannel cookingYtChannel("Amy's Kitchen", "Amy");
+    CookingYouTubeChannel cookingYtChannel2("John's Kitchen", "John");
+    cookingYtChannel.PublishVideo("Apple pie");
+    cookingYtChannel.PublishVideo("Chocolate cake");
+    cookingYtChannel.Subscribe();
+    cookingYtChannel.Subscribe();
+    cookingYtChannel.GetInfo();
+    cookingYtChannel.Practise();
+    cookingYtChannel2.Practise();
+
+    // not available
+    // ytChannel.Practise();
 
     system("pause>0");
 }
