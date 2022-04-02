@@ -10,12 +10,14 @@ private:
 
 protected: 
     string OwnerName;
+    int ContentQuality;
 
 public:
     YouTubeChannel(string name, string ownerName) {
         Name = name;
         OwnerName = ownerName; 
         SubscribersCount = 0;
+        ContentQuality = 0;
     }
 
     void GetInfo() {
@@ -61,6 +63,14 @@ public:
     void PublishVideo(string title) {
         PublishedVideoTitles.push_back(title);
     }
+
+    void CheckAnalytics() {
+        if (ContentQuality < 5) {
+            cout << Name << " has bad quality content." << endl;
+        } else {
+            cout << Name << " has great content." << endl;
+        }
+    }
 };
 
 class CookingYouTubeChannel: public YouTubeChannel {
@@ -71,8 +81,22 @@ public:
 
     void Practise() {
         cout << OwnerName << " is practising cooking, learning new recipes, experimenting with spices..." << endl;
+        ContentQuality++;
     }
 };
+
+class SingersYouTubeChannel : public YouTubeChannel {
+public:
+    SingersYouTubeChannel(string name, string ownerName) :YouTubeChannel(name, ownerName) {
+
+    }
+
+    void Practise() {
+        cout << OwnerName << " is taking singing classes, learning new songs, learning how to dance..." << endl;
+        ContentQuality++;
+    }
+};
+
 
 int main()
 {
@@ -107,6 +131,22 @@ int main()
 
     // not available
     // ytChannel.Practise();
+
+
+    cout << endl << endl;
+
+    SingersYouTubeChannel singersYtChannel("JohnSings", "John");
+    singersYtChannel.Practise();
+    singersYtChannel.Practise();
+    singersYtChannel.Practise();
+    singersYtChannel.Practise();
+    singersYtChannel.Practise();
+
+    YouTubeChannel* yt1 = &cookingYtChannel;
+    YouTubeChannel* yt2 = &singersYtChannel;
+
+    yt1->CheckAnalytics();
+    yt2->CheckAnalytics();
 
     system("pause>0");
 }
