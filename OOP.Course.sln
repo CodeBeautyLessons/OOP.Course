@@ -11,6 +11,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3. AbstractionsExplained", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4. OperatorOverloading", "4. OperatorOverloading\4. OperatorOverloading.vcxproj", "{79256CE7-5224-4991-B1CE-D046BDFBAAEB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5. FriendFunctions", "5. FriendFunctions\5. FriendFunctions.vcxproj", "{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5. FriendFunctionsHomework", "5. FriendFunctionsHomework\5. FriendFunctionsHomework.vcxproj", "{8A160E90-34DA-4749-9853-ECA3CBF21CDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +55,22 @@ Global
 		{79256CE7-5224-4991-B1CE-D046BDFBAAEB}.Release|x64.Build.0 = Release|x64
 		{79256CE7-5224-4991-B1CE-D046BDFBAAEB}.Release|x86.ActiveCfg = Release|Win32
 		{79256CE7-5224-4991-B1CE-D046BDFBAAEB}.Release|x86.Build.0 = Release|Win32
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Debug|x64.ActiveCfg = Debug|x64
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Debug|x64.Build.0 = Debug|x64
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Debug|x86.ActiveCfg = Debug|Win32
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Debug|x86.Build.0 = Debug|Win32
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Release|x64.ActiveCfg = Release|x64
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Release|x64.Build.0 = Release|x64
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Release|x86.ActiveCfg = Release|Win32
+		{C955A7AC-DFBE-47C2-96FC-5CA21D5AFC3E}.Release|x86.Build.0 = Release|Win32
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Debug|x64.ActiveCfg = Debug|x64
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Debug|x64.Build.0 = Debug|x64
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Debug|x86.ActiveCfg = Debug|Win32
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Debug|x86.Build.0 = Debug|Win32
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Release|x64.ActiveCfg = Release|x64
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Release|x64.Build.0 = Release|x64
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Release|x86.ActiveCfg = Release|Win32
+		{8A160E90-34DA-4749-9853-ECA3CBF21CDD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
